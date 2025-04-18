@@ -1,0 +1,136 @@
+.ds-section{
+    background-color: white;
+    margin-bottom: 40px;
+    //min-height: calc(80vh - 110px);
+    padding-bottom: 56px;
+    
+    .ds-heading{
+        font-weight: 500;
+        background-color: cadetblue;
+        padding: 40px;
+        color: white;
+        font-size: 40px;
+    }
+    .ds-section-title{
+        text-transform: uppercase;
+        color: #888888;
+        margin-bottom: 1rem;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .content{
+        padding: 40px;
+    }
+}
+
+.ds-colors{
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    > * {
+        display: flex;
+        flex: 1 1 auto;
+        border: solid 1px #ddd;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        min-height: 50px;
+    }
+}
+.ds-table{
+    width: 100%;
+    tr{
+        border-bottom: solid 1px #ddd;
+    }
+}
+.ds-grid-9{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(80px, 1fr) );;
+    
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.ds-grid-typo{
+    display: grid;
+    grid-template-columns: 50% repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    span{
+        text-align: center;
+    }
+}
+.ds-grid-2{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: end;
+}
+
+.border-b{
+    border-bottom: solid 1px #ddd;
+}
+:root{
+    --size: 40px;
+    --gap: 1rem;
+}
+.min-40{
+    --size:40px
+}
+.min-80{
+    --size:80px
+}
+.min-120{
+    --size:120px
+}
+
+.grid-auto-fill{
+    grid-template-columns: repeat( auto-fill, minmax(var(--size), 1fr) );
+}
+.grid-auto-fit{
+    grid-template-columns: repeat( auto-fit, minmax(var(--size), 1fr) );
+}
+.ds-grid-icon{
+
+    gap: 1rem;
+    span{
+        border: solid 1px #ddd;
+        aspect-ratio: 1/1;
+        border-radius: 4px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        display: flex;
+    }
+    svg{
+        stroke: #858585; 
+    }
+}
+
+.cols-1{
+    --cols: 1;
+}
+.cols-2{
+    --cols: 2;
+}
+.cols-3{
+    --cols: 3;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    gap: 1rem;
+}
+.w-700{
+    width: 700px;
+}
+.w-100{
+    width: 100px;
+}

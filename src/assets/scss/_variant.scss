@@ -1,0 +1,26 @@
+/*variants*/
+@use "sass:selector";
+@mixin setColor($bg, $color){
+    background-color: $bg!important;
+    color: $color!important;
+}
+.filled {
+    @include setColor(var(--main), var(--contrast));
+    a {
+        color: var(--contrast);
+    }
+}
+
+.outlined {
+    @include setColor(transparent, var(--main));
+    border: solid 1px var(--main) !important;
+}
+
+
+.variant {
+    aspect-ratio: 1/1;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,207 @@
+/*colors*/
+:root,
+[data-theme=light] {
+    .primary {
+        --main: #4B70F8;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #fff
+    }
+
+    .primary\[0\] {
+        --main: transparent;
+        --light: transparent;
+        --dark: #1565c0;
+        --contrast: #1565c0;
+    }
+
+    .primary\[1\] {
+        --main: transparent;
+        --light: #EDF1FE;
+        --dark: #1565c0;
+        --contrast: #1565c0;
+    }
+
+    .primary\[50\] {
+        --main: #EDF1FE;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #1565c0;
+    }
+
+    .primary\[100\] {
+        --main: #C7D3FD;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #1565c0;
+    }
+
+    .primary\[200\] {
+        --main: #ACBDFC;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #1565c0;
+    }
+
+    .primary\[300\] {
+        --main: #869FFA;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #1565c0;
+    }
+
+    .primary\[400\] {
+        --main: #6F8DF9;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #1565c0;
+    }
+
+    .primary\[500\] {
+        --main: #4B70F8;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #1565c0;
+    }
+
+    .primary\[600\] {
+        --main: #4466E2;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #1565c0;
+    }
+
+    .primary\[700\] {
+        --main: #3550B0;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #ffffff;
+    }
+
+    .secondary {
+        --main: rgb(74, 78, 99);
+        --light: rgb(218, 218, 218);
+        --dark: rgb(48, 48, 48);
+        --contrast: white
+    }
+
+    .info {
+        --main: #50a5f1;
+        --light: #50a5f1;
+        --dark: #50a5f1;
+        --contrast: white
+    }
+
+    .warning {
+        --main: #ed6c02;
+        --light: #ff9800;
+        --dark: #c62828;
+        --contrast: #fff
+    }
+
+    .danger {
+        --main: #d32f2f;
+        --light: #ef5350;
+        --dark: #e65100;
+        --contrast: #fff
+    }
+
+    .success {
+        --main: rgb(52, 195, 143);
+        --light: #34c38f;
+        --dark: #34c38f;
+        --contrast: #fff;
+    }
+
+    .light {
+        --main: #dbdbdb;
+        --light: #4caf50;
+        --dark: #1b5e20;
+        --contrast: #282828;
+    }
+
+    .white {
+        --main: rgb(255, 255, 255);
+        --light: #4caf50;
+        --dark: #1b5e20;
+        --contrast: #fdfdfd;
+    }
+
+
+    .dark {
+        --main: #343a40;
+        --light: #4caf50;
+        --dark: #1b5e20;
+        --contrast: white
+    }
+
+}
+
+
+/*colors*/
+[data-theme=dark] {
+    .primary {
+        --main: red;
+        --light: #42a5f5;
+        --dark: #1565c0;
+        --contrast: #fff
+    }
+
+    .secondary {
+        --main: #74788d;
+        --light: rgb(218, 218, 218);
+        --dark: rgb(48, 48, 48);
+        --contrast: white
+    }
+
+    .info {
+        --main: #50a5f1;
+        --light: #50a5f1;
+        --dark: #50a5f1;
+        --contrast: white
+    }
+
+    .warning {
+        --main: #ed6c02;
+        --light: #ff9800;
+        --dark: #c62828;
+        --contrast: #fff
+    }
+
+    .danger {
+        --main: #d32f2f;
+        --light: #ef5350;
+        --dark: #e65100;
+        --contrast: #fff
+    }
+
+    .success {
+        --main: #34c38f;
+        --light: #34c38f;
+        --dark: #34c38f;
+        --contrast: #fff;
+    }
+
+    .light {
+        --main: #EAEBEC;
+        --light: #4caf50;
+        --dark: #1b5e20;
+        --contrast: #343A40
+    }
+
+    .white {
+        --main: white;
+        --light: #4caf50;
+        --dark: #1b5e20;
+        --contrast: #74788d
+    }
+
+    .dark {
+        --main: #343a40;
+        --light: #4caf50;
+        --dark: #1b5e20;
+        --contrast: white
+    }
+}
+
+ 

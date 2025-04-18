@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    font-weight: 100!important;
+    background-color: #F9FAFB!important;
+    font-size: 14px;
+}
+
+
+a{
+    text-decoration: none!important;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+main{
+    flex: 1 0 auto;
+}

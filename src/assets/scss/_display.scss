@@ -1,0 +1,55 @@
+@use "sass:math";
+[class^="grid"] {
+    display: grid;
+    gap: var(--gap);
+}
+
+[class^="flex"] {
+    display: flex;
+    margin-left: calc(var(--gap) * -0.5);
+    margin-right: calc(var(--gap) * -0.5);
+    > * {
+        padding-right: calc(var(--gap) * 0.5);
+        padding-left: calc(var(--gap) * 0.5);
+    }
+}
+
+.container {
+    width: min(1024px, calc(100% - 24px));
+    margin: 1rem auto;
+}
+
+.flex-row-wrap {
+    flex-flow: row wrap;
+}
+
+.flex-row-nowrap {
+    flex-flow: row nowrap;
+}
+
+.flex-column-wrap {
+    flex-flow: column wrap;
+}
+
+:root{
+    --columns: 12;
+}
+$columns: 12;
+
+
+@for $i from 1 through $columns {
+    .col-#{$i}{
+        flex: 0 0 auto;
+        width:  math.div(100% , $columns) * $i;
+    }
+}
+
+
+.column{
+    background-color: aliceblue;
+    padding: 1rem;
+    border: solid 1px #D8DCE6;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+}

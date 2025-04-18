@@ -1,0 +1,13 @@
+[class*="gap"] {
+    gap: var(--gap);
+}
+
+[class*="p-"] {
+    padding: var(--padding);
+}
+
+
+@include generate-utility('gap', 'gap', $input-sizes);
+
+@include generate-utility('p', 'padding', $input-sizes);
+

@@ -1,0 +1,91 @@
+@use "sass:map";
+@use "sass:meta";
+@use "sass:selector";
+@use "sass:string";
+
+
+@mixin generate-utility($property-name, $css-var-name, $map) {
+  @each $bp-name, $bp-value in $breakpoints {
+    @if $bp-name =='' {
+      @each $key, $value in $map {
+        .#{$property-name}-#{$key} {
+          --#{$css-var-name}: #{$value};
+        }
+      }
+    }
+
+    @else {
+      @media (min-width: #{$bp-value}) {
+        @each $key, $value in $map {
+          .#{$bp-name}\:#{$property-name}-#{$key} {
+            --#{$css-var-name}: #{$value};
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-header {
+  --padding: 1rem;
+  border-bottom: solid 1px #e5e7eb;
+}
+
+.modal-footer {
+  border-top: solid 1px #e5e7eb;
+}
+
+.modal-body {
+  overflow: auto;
+  padding: 1rem;
+}
+
+@mixin unify-parents($child) {
+  @at-root #{selector.nest($child ,   "&-header")} {
+    padding: var(--padding);
+    @extend .modal-header;
+  }
+}
+
+
+@mixin apply-to-all($mixin, $list) {
+  @each $element, $value in $list {
+    @include meta.apply($mixin, $element, $value);
+  }
+}
+
+@mixin font-class($size, $a) {
+  .font-#{$size} {
+    --font-size: #{$size};
+    font-weight: $a;
+  }
+}
+
+
+$theme-colors: (
+  "primary": #007bff,
+  "secondary": #6c757d,
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "dark": #343a40,
+  "light": #f8f9fa,
+);
+$theme-colors1: (
+  "primary": #52b610,
+  "secondary": #74788d,
+  "info": #50a5f1,
+  "warning": #ed6c02,
+  "danger": #d32f2f
+);
+
+//$theme-colors: map.merge($theme-colors, $theme-colors1);
+
+
+@each $name, $color in $theme-colors {
+  .bg-#{$name} {
+    background-color: $color;
+    color: white;
+  }
+}

@@ -1,0 +1,45 @@
+.btn{
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #e0e0e0;
+}
+.input{
+    border-radius: 0.25rem;
+    background-color: #fff;
+    border: solid 1px #D8DCE6;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    input{
+        border: none;
+        padding: .5rem 1rem;
+        width: 100%;
+        border-radius: 4px;
+        &:focus-visible{
+            outline: none;
+        }
+    }
+}
+
+.box{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #D8DCE6;
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    aspect-ratio: 1/1;
+}
+
+
+@each $bp, $bp-value in $breakpoints {
+    @media (min-width: $bp-value) {
+        @each $size, $value in $input-sizes{
+            .#{$bp}\:size-#{$size}{
+                width: $value;
+            }
+        }
+        
+    }
+}
