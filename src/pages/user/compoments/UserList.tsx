@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { useDelete, useFetch, useUpdate } from "../../../hooks/useApi"
 export const UserList = () => {
-  const { data: users } = useFetch<any[]>('users', '/users');
-  const { data: posts } = useFetch<any[]>('products', '/products');
+  const { data: users = [] } = useFetch<any[]>('users', '/users');
+  const { data: posts = [] } = useFetch<any[]>('products', '/products');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const deleteUser =  useDelete(`/users/${selectedId}`, 'users').mutate
   const updateUser = useUpdate(`/users/${selectedId}`, 'users').mutate
@@ -15,22 +15,14 @@ export const UserList = () => {
       updateUser({ name: newName })
     }
   }
-
+  
   const handleDelete = (userId: string) => {
     setSelectedId(userId);
     deleteUser();
   }
-  if (!Array.isArray(users)) {
-    return <p>Dữ liệu không hợp lệ</p>
-  }
-
-  if (!Array.isArray(posts)) {
-    return <p>Dữ liệu không hợp lệ</p>
-  }
-
+  
   return (
     <>
-    This is UserList
       <ul>
         {users.map(user => (
           <li key={user.id}>

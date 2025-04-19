@@ -9,20 +9,20 @@ export const useFetch = <T>(key: string, endPoint: string, params?: object) => {
   })
 }
 
-export const useAdd = <T>(source: string, invalidateKey: string) => {
+export const useAdd = <T>(endPoint: string, invalidateKey: string) => {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: (data: T) => addApi<T>(source, data),
+    mutationFn: (data: T) => addApi<T>(endPoint, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [invalidateKey] })
     },
   })
 }
 
-export const useUpdate = <T>(source: string, invalidateKey: string) => {
+export const useUpdate = <T>(endPoint: string, invalidateKey: string) => {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: (data: Partial<T>) => updateApi<T>(source, data),
+    mutationFn: (data: Partial<T>) => updateApi<T>(endPoint, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [invalidateKey] })
     },
