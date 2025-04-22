@@ -15,11 +15,8 @@ import DsShape from "./design-system/compnents/DsShape";
 import Callback from "../components/callback/Callback";
 import ChildCom from "../components/test/ChildCom";
 import DsFlex from "./design-system/compnents/DsFlex";
-import Accordion from "../components/accordion/Accordion";
-import AccordionItem from "../components/accordion/AccordionItem";
 import { UserList } from "./user/compoments/UserList";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import axios from "axios";
 
 const Home: React.FC = () => {
     const [UIColor, setUIColor] = React.useState<string>('#FF00CC');

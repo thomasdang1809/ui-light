@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { lightTheme, darkTheme } from './theme';
+import { lightTheme } from './theme';
 
 type Theme = typeof lightTheme;
 
