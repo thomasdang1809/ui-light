@@ -13,9 +13,6 @@ const DsVariant: React.FC = () => {
                 <div className="variant outlined danger">
                     Outlined
                 </div>
-                <div className=" flex">
-                    This is gap
-                </div>
                 
             </div>
         </Section>

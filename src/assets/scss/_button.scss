@@ -1,9 +1,8 @@
-.btn{
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    border: none;
-    background-color: #e0e0e0;
+.button{
+    @extend .icon;
+    padding: 0.5rem 1rem;   
 }
+
 .input{
     border-radius: 0.25rem;
     background-color: #fff;

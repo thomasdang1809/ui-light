@@ -37,7 +37,7 @@ const DsColor: React.FC = () => {
 
             {
                 baseColors.map((baseColor, index) => (
-                    <div key={index}>
+                    <div key={index} style={{ marginBottom: '1.5rem' }}>
                         <h3 className="ds-section-title">{baseColor.name}</h3>
                         <div className="grid-auto-fit min-80" >
                             {

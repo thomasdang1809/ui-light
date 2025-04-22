@@ -1,14 +1,9 @@
 @use "sass:math";
-[class^="grid"] {
-    display: grid;
-    gap: var(--gap);
-}
+
 
 [class^="flex"] {
     display: flex;
-    margin-left: calc(var(--gap) * -0.5);
-    margin-right: calc(var(--gap) * -0.5);
-    > * {
+    >* {
         padding-right: calc(var(--gap) * 0.5);
         padding-left: calc(var(--gap) * 0.5);
     }
@@ -31,25 +26,53 @@
     flex-flow: column wrap;
 }
 
-:root{
+:root {
     --columns: 12;
 }
+
 $columns: 12;
 
 
 @for $i from 1 through $columns {
-    .col-#{$i}{
+    .col-#{$i} {
         flex: 0 0 auto;
-        width:  math.div(100% , $columns) * $i;
+        width: math.div(100%, $columns) * $i;
     }
 }
 
 
-.column{
+.column {
     background-color: aliceblue;
     padding: 1rem;
     border: solid 1px #D8DCE6;
     border-radius: 4px;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+$display-values: (
+    none, block, inline, inline-block,
+    flex, inline-flex,
+    grid, inline-grid,
+    table, inline-table, table-row, table-cell, table-column, table-caption) !default;
+
+
+// Responsive utilities
+@each $bp, $bp-width in $breakpoints {
+    @if $bp == '' {
+        @each $value in $display-values {
+            .d-#{$value} {
+                display: #{$value} !important;
+            }
+        }
+    }@else {
+        @media (min-width: #{$bp-width}) {
+            @each $value in $display-values {
+                .#{$bp}\:d-#{$value} {
+                    display: #{$value} !important;
+                }
+            }
+        }
+    }
+    
 }

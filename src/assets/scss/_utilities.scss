@@ -1,0 +1,45 @@
+@use "sass:map";
+
+$utilities: (
+    "opacity": (property: opacity,
+        class: o,
+        responsive: false,
+        values: (0: 0, 25: .25, 50: .5, 75: .75, 100: 1))
+);
+$utilities1: (
+    "z-index": (property: z-index,
+        class: z,
+        responsive: true,
+        values: (0: 0, 10: 10, 50: 50, 75: 75, 100: 1)),
+    "opacity": (property: opacity,
+        class: op,
+        values: (0: 0, 25: .25, 50: .5, 75: .75, 100: 1))
+);
+
+$utilities: map-merge($utilities, $utilities1);
+
+@each $key, $config in $utilities {
+    $property: map-get($config, property);
+    $classPrefix: map-get($config, class);
+    $values: map-get($config, values);
+    $is-responsive: map-get($config, responsive);
+
+    @each $suffix, $value in $values {
+
+        // Base class
+        .#{$classPrefix}-#{$suffix} {
+            #{$property}: #{$value} !important;
+        }
+
+        // Responsive variants (md:, lg:)
+        @if $is-responsive ==true {
+            @each $breakpoint, $size in $breakpoints {
+                @media (min-width: #{$size}) {
+                    .#{$breakpoint}\:#{$classPrefix}-#{$suffix} {
+                        #{$property}: #{$value} !important;
+                    }
+                }
+            }
+        }
+    }
+}

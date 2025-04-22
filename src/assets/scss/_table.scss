@@ -1,0 +1,25 @@
+.table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: solid 1px #D8DCE6;
+    border-radius: 4px;
+    overflow: hidden;
+    thead{
+        tr{
+            th{
+                padding: 1rem;
+                background-color: #f7f7f7;
+                border-bottom: solid 1px #D8DCE6;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                padding: 1rem;
+                border-bottom: solid 1px #D8DCE6;
+            }
+        }
+    }
+}

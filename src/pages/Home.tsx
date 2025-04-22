@@ -19,6 +19,7 @@ import Accordion from "../components/accordion/Accordion";
 import AccordionItem from "../components/accordion/AccordionItem";
 import { UserList } from "./user/compoments/UserList";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import axios from "axios";
 
 const Home: React.FC = () => {
     const [UIColor, setUIColor] = React.useState<string>('#FF00CC');
@@ -29,42 +30,33 @@ const Home: React.FC = () => {
     const setYourName = (name: string) => {
         setName(name)
     };
-    
+    const api = axios.create({
+        baseURL: "https://ui-light-api.onrender.com/", // hoặc URL của Render nếu bạn đã deploy
+    });
+    const handleCreateEntity = async () => {
+        try {
+            const res = await api.post("/entities", { name: "posts" });
+            console.log("✅ Entity created:", res.data);
+        } catch (err) {
+            console.error("❌ Error creating entity:", err);
+        }
+    };
     return (
         <div className="container">
-            <h1 className="bg-primary">Home</h1>
+            <button onClick={handleCreateEntity}>
+                Tạo Entity "products"
+            </button>
             <UserList />
-            <ReactQueryDevtools/>
-            <div className="card">
-                <div className="card-header">
-                    This is card header
-                </div>
-                <div className="card-body">
-                    Card body
-                </div>
-                <div className="card-footer">
-                    Footer
-                </div>
-            </div>
-            <div className="toast">
-                <div className="toast-header">
-                    This is a toast
-                </div>
-                <div className="toast-body">
-                    Toast body
-                </div>
-                <div className="toast-footer">
-                    Toast Footer
-                </div>
-            </div>
+            <ReactQueryDevtools />
+
             <Accordion>
-                <AccordionItem 
-                    summary="This is summary" 
+                <AccordionItem
+                    summary="This is summary"
                     details="This is details"
                 />
-                <AccordionItem 
-                    summary="This is summary" 
-                    details="This is details" 
+                <AccordionItem
+                    summary="This is summary"
+                    details="This is details"
                 />
             </Accordion>
             <DsFlex />

@@ -1,0 +1,20 @@
+.vstack{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.hstack{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-items: center;
+}
+.grid{
+    display: grid;
+}
+.auto-fill{
+    grid-template-columns: repeat( auto-fill, minmax(240px, 1fr) );
+}
+.auto-fit{
+    grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
+}   

@@ -25,7 +25,6 @@ const Dialog: React.FC<IDialog> = ({
                     <div className="modal-body">
                         {children}
                     </div>
-
                     <div className="modal-footer">
                         {actions}
                     </div>

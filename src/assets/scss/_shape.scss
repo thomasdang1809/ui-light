@@ -1,0 +1,13 @@
+$rounds: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    full: 50%
+);
+
+
+@each $key, $value in $rounds {
+    .rounded-#{$key} {
+        --rounded: #{$value}!important;
+    }
+}

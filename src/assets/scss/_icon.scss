@@ -1,0 +1,11 @@
+
+.icon{
+    border-radius: var(--rounded);
+    height: var(--size);
+    border: none;
+    background-color: transparent;
+    aspect-ratio: 1/1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
