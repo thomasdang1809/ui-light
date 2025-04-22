@@ -56,7 +56,7 @@ export const UserList = () => {
         {testimonials.map(testimonial => (
           <li key={testimonial.id}>
             <img src={testimonial.image} width={32} style={{ aspectRatio: '1/1', borderRadius: '50%', backgroundSize: 'contain' }} />
-            {testimonial.name} - {testimonial.company}
+            {testimonial.name} - {testimonial.org}
             <div>{testimonial.text}</div>
           </li>
         ))}

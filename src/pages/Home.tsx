@@ -30,35 +30,14 @@ const Home: React.FC = () => {
     const setYourName = (name: string) => {
         setName(name)
     };
-    const api = axios.create({
-        baseURL: "https://ui-light-api.onrender.com/", // hoặc URL của Render nếu bạn đã deploy
-    });
-    const handleCreateEntity = async () => {
-        try {
-            const res = await api.post("/entities", { name: "posts" });
-            console.log("✅ Entity created:", res.data);
-        } catch (err) {
-            console.error("❌ Error creating entity:", err);
-        }
-    };
+    
     return (
         <div className="container">
-            <button onClick={handleCreateEntity}>
-                Tạo Entity "products"
-            </button>
+            
             <UserList />
             <ReactQueryDevtools />
 
-            <Accordion>
-                <AccordionItem
-                    summary="This is summary"
-                    details="This is details"
-                />
-                <AccordionItem
-                    summary="This is summary"
-                    details="This is details"
-                />
-            </Accordion>
+            
             <DsFlex />
             <DsFont />
             <DsIcon />
