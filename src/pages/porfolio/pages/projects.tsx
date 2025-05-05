@@ -10,14 +10,14 @@ const Projects = () => {
                 <h6>Web</h6>
                 <div className="projects">
                     <Project imageURL="/images/projects/project-hana.png" name="Hana Spa" type="Web" />
-                    <Project imageURL="project-reservation.png" name="Reservation" type="Web Application" />
-                    <Project imageURL="project-seamless.png" name="Seamless" type="Web" />
-                    <Project imageURL="project-bank-broker.png" name="Bank Broker" type="Web Application" />
-                    <Project imageURL="project-cu-meo.png" name="Cu Meo" type="Web Site" />
+                    <Project imageURL="/images/projects/project-reservation.png" name="Reservation" type="Web Application" />
+                    <Project imageURL="/images/projects/project-seamless.png" name="Seamless" type="Web" />
+                    <Project imageURL="/images/projects/project-bank-broker.png" name="Bank Broker" type="Web Application" />
+                    <Project imageURL="/images/projects/project-cu-meo.png" name="Cu Meo" type="Web Site" />
                 
-                    <Project imageURL="project-house-guru.png" name="House Guru" type="Web Site" />
-                    <Project imageURL="project-bao-minh.png" name="Bao Minh" type="Web Application" />
-                    <Project imageURL="project-cameralla-photo.png" name="Cameralla" type="Web Site" />
+                    <Project imageURL="/images/projects/project-house-guru.png" name="House Guru" type="Web Site" />
+                    <Project imageURL="/images/projects/project-bao-minh.png" name="Bao Minh" type="Web Application" />
+                    <Project imageURL="/images/projects/project-cameralla-photo.png" name="Cameralla" type="Web Site" />
                 </div>
             </section>
 
