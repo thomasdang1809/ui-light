@@ -1854,7 +1854,7 @@ input[type=radio]:disabled + .indicator, input[type=checkbox]:disabled + .indica
 }
 
 .aside {
-  background-color: #03234C;
+  background: url("/images/others/shape-top.png") no-repeat top center/contain, url("/images/others/shape-bottom.png") no-repeat bottom center/contain, #03234C;
   flex: 0 0 480px;
   display: flex;
   flex-direction: column;
