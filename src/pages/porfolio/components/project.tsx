@@ -8,7 +8,7 @@ const Project: React.FC<IProject> = ({ imageURL, name, type }) => {
     return (
         <div className="project">
             <div className="project-img">
-                <img src={`../../src/assets/images/projects/` + imageURL} alt="" width="100%" />
+                <img src={imageURL} alt="" width="100%" />
             </div>
             <div className="project-info">
                 <strong>Project name: {name}</strong>

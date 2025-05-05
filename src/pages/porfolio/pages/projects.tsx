@@ -9,7 +9,7 @@ const Projects = () => {
             <section>
                 <h6>Web</h6>
                 <div className="projects">
-                    <Project imageURL="project-hana.png" name="Hana Spa" type="Web" />
+                    <Project imageURL="/images/projects/project-hana.png" name="Hana Spa" type="Web" />
                     <Project imageURL="project-reservation.png" name="Reservation" type="Web Application" />
                     <Project imageURL="project-seamless.png" name="Seamless" type="Web" />
                     <Project imageURL="project-bank-broker.png" name="Bank Broker" type="Web Application" />
