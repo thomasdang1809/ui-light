@@ -24,10 +24,10 @@ const Projects = () => {
             <section>
                 <h6>Mobile</h6>
                 <div className="projects">
-                    <Project imageURL="project-yoga-club.png" name="Yoga Club" type="Mobile App" />
-                    <Project imageURL="project-fast-food.png" name="Fast Food" type="Mobile App" />
-                    <Project imageURL="project-larvik.png" name="Larvik" type="Mobile App" />
-                    <Project imageURL="project-shop-app.png" name="Shop App" type="Mobile App" />                    
+                    <Project imageURL="/images/projects/project-yoga-club.png" name="Yoga Club" type="Mobile App" />
+                    <Project imageURL="/images/projects/project-fast-food.png" name="Fast Food" type="Mobile App" />
+                    <Project imageURL="/images/projects/project-larvik.png" name="Larvik" type="Mobile App" />
+                    <Project imageURL="/images/projects/project-shop-app.png" name="Shop App" type="Mobile App" />                    
                 </div>
             </section>
            

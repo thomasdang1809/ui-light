@@ -5,7 +5,7 @@ const Aside = () => {
     return (
         <aside className="aside">
             <div className="user-info">
-                <img className="avatar" src="../../src/assets/images/thomas/thomas_avatar.png" alt="" />
+                <img className="avatar" src="/images/thomas/thomas_avatar.png" alt="" />
                 <h6>Thomas Dang</h6>
                 <p>UI/UX Designer</p>
             </div>
