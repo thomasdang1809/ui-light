@@ -16,5 +16,6 @@ export const updateApi = async <T>(endPoint: string, data: Partial<T>): Promise<
 }
 
 export const deleteApi = async (endPoint: string): Promise<void> => {
+  console.log(endPoint)
   await axiosClient.delete(endPoint)
 }

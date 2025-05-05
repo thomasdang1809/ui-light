@@ -8,34 +8,26 @@ import DsFont from "./design-system/compnents/DsFont";
 import DsIcon from "./design-system/compnents/DsIcon";
 import DsInput from "./design-system/compnents/DsInput";
 import DsAlert from "./design-system/compnents/DsAlert";
-import DsCheck from "./design-system/compnents/DsCheck";
-import DsRadio from "./design-system/compnents/DsRadio";
 import DsVariant from "./design-system/compnents/DsVariant";
 import DsShape from "./design-system/compnents/DsShape";
-import Callback from "../components/callback/Callback";
-import ChildCom from "../components/test/ChildCom";
 import DsFlex from "./design-system/compnents/DsFlex";
-import { UserList } from "./user/compoments/UserList";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+import DsAccordion from "./design-system/compnents/DsAccordion";
+import Product from "../components/cards/Product";
 
 const Home: React.FC = () => {
-    const [UIColor, setUIColor] = React.useState<string>('#FF00CC');
-    const myColor = (color: string) => {
-        setUIColor(color);
-    }
-    const [name, setName] = React.useState<string>('Carol');
-    const setYourName = (name: string) => {
-        setName(name)
-    };
     
+   
     return (
-        <div className="container">
-            
-            <UserList />
-            <ReactQueryDevtools />
-
-            
+        <div className="contain">
+            <div className="grid min-320">
+                <Product />
+                <Product />
+                <Product />
+            </div>
+           
             <DsFlex />
+            <DsAccordion />
             <DsFont />
             <DsIcon />
             <DsTypography />
@@ -46,13 +38,8 @@ const Home: React.FC = () => {
             <DsButton />
             <DsInput />
             <DsAlert />
-            <DsCheck />
-            <DsRadio />
-            <div style={{ backgroundColor: UIColor }}>
-                This is color
-            </div>
-            <Callback getColor={myColor} defaultColor={UIColor} />
-            <ChildCom getColor={setYourName} defaultValue="My name is: " />{name}
+         
+            
         </div>
 
     )

@@ -1,0 +1,180 @@
+.wrapper {
+    display: flex;
+    height: auto;
+
+}
+
+.bg-blue {
+    background-color: #162F58;
+    color: white;
+}
+
+.aside {
+    background-color: #03234C;
+    flex: 0 0 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nova Round", system-ui;
+    position: fixed;
+    height: 100vh;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    width: 100%;
+    min-height: 100dvh;
+    margin-left: 310px;
+}
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid 4px rgba(225, 225, 225, 0.2);
+    margin-bottom: 1rem;
+}
+
+.nav {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu {
+    list-style: none;
+    padding: 0rem;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-item {
+        margin: 0;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .menu-link {
+        color: white;
+        border-radius: 100px;
+        background-color: #162F58;
+        display: flex;
+        padding: 0 2rem;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 100%;
+        text-transform: uppercase;
+        font-family: "Nova Round", system-ui;
+        font-size: 14px;
+        &.active {
+            background-color: #1D3D72;
+            color: white;
+        }
+
+        &:hover {
+            background-color: #1D3D72;
+            color: white;
+        }
+    }
+}
+
+.contact-info {
+    text-align: center;
+    padding: 2rem;
+}
+
+.user-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+    font-family: "Nova Round", system-ui;
+}
+p{
+    letter-spacing: 1.5px;
+    font-weight: 200;
+}
+h1{
+    font-size: 48px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 32px;
+}
+h4{
+    font-size: 28px;
+}
+h5{
+    font-size: 24px;
+}
+h6{
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+.desc{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: .5rem;
+}
+
+.history{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1rem;
+    p{
+        margin-bottom: 1rem;
+    }
+}
+.skills{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    dd{
+        text-align: right;
+        justify-content: end;
+    }
+    strong{
+        padding-left: 1.5rem;
+    }
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.project{
+    background-color: #284677;
+    overflow: hidden;
+    .project-info{
+        padding: .75rem 1rem;
+        font-size: 12px;
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: #1D3D72;
+    }
+}

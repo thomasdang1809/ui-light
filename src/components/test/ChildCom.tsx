@@ -9,7 +9,6 @@ const ChildCom: React.FC<IChildCom> = ({ getColor, defaultValue}) => {
     }
     return (
         <div onClick={hnadleClick}>
-            ChildCom
             {defaultValue}
         </div>
     )

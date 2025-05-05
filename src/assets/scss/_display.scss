@@ -1,7 +1,7 @@
 @use "sass:math";
 
 
-[class^="flex"] {
+.flex {
     display: flex;
     >* {
         padding-right: calc(var(--gap) * 0.5);
@@ -15,14 +15,17 @@
 }
 
 .flex-row-wrap {
+    @extend .flex;
     flex-flow: row wrap;
 }
 
 .flex-row-nowrap {
+    @extend .flex;
     flex-flow: row nowrap;
 }
 
 .flex-column-wrap {
+    @extend .flex;
     flex-flow: column wrap;
 }
 

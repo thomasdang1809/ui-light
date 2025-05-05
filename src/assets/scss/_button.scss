@@ -1,5 +1,6 @@
 .button{
     @extend .icon;
+    aspect-ratio: auto;
     padding: 0.5rem 1rem;   
 }
 
@@ -21,16 +22,6 @@
     }
 }
 
-.box{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: solid 1px #D8DCE6;
-    border-radius: 4px;
-    padding: .5rem 1rem;
-    aspect-ratio: 1/1;
-}
-
 
 @each $bp, $bp-value in $breakpoints {
     @media (min-width: $bp-value) {
@@ -41,4 +32,12 @@
         }
         
     }
+}
+
+
+.icon-container{
+    transition: scale .5s ease-in-out;
+}
+.icon-container:has(:hover) :not(:hover){
+    scale: 0.8;
 }

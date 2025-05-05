@@ -1,20 +1,103 @@
-.vstack{
+.vstack, .hstack{
     display: flex;
+}
+.vstack{
     flex-direction: column;
     align-items: stretch;
 }
 .hstack{
-    display: flex;
     flex-direction: row;
-    align-items: stretch;
     align-items: center;
+}
+:root{
+    --mode: auto-fill;
+    --min-size: 40px;
+    --max-size: 1fr;
 }
 .grid{
     display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat( var(--mode), minmax(var(--min-size), var(--max-size)) );
 }
-.auto-fill{
-    grid-template-columns: repeat( auto-fill, minmax(240px, 1fr) );
+.columns-fill{
+    --mode:auto-fill
 }
-.auto-fit{
-    grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
-}   
+.columns-fit{
+    --mode:auto-fit
+}
+.cols-1{
+    --mode:1
+}
+.cols-2{
+    --mode:2
+}
+.cols-3{
+    --mode:3
+}
+.cols-4{
+    --mode:4
+}
+.cols-5{
+    --mode:5
+}
+.cols-12{
+    --mode:12
+}
+.min-40{
+    --min-size:40px
+}
+.min-80{
+    --min-size:80px
+}
+.min-100{
+    --min-size:100px
+}
+.min-120{
+    --min-size:120px
+}
+.min-320{
+    --min-size:320px
+}
+
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    gap: var(--gap);
+}
+.expand-2{
+    grid-column: span 2;
+}
+.expand-3{
+    grid-column: span 3;
+}
+.expand-4{
+    grid-column: span 4;
+}
+.expand-5{
+    grid-column: span 5;
+}
+.expand-6{
+    grid-column: span 6;
+}
+.expand-7{
+    grid-column: span 7;
+}
+.expand-8{
+    grid-column: span 8;    
+}
+.expand-9{
+    grid-column: span 9;    
+}
+.expand-10{
+    grid-column: span 10;    
+}
+.expand-11{
+    grid-column: span 11;    
+}
+.expand-12{
+    grid-column: span 12;    
+}
+.expand-auto{
+    grid-auto-columns: max-content;
+}

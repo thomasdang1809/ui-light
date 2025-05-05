@@ -17,10 +17,8 @@
     }
     
 }
-:root{
-    --padding: 1rem;
-}
-.modal{
+
+.modal, .accordion{
 
     display: flex;
     flex-direction: column;
@@ -36,7 +34,7 @@
      border-bottom: 1px solid #e5e7eb;
  }
  &-body{
-     padding: 16px;
+     padding: var(--padding);
      flex: 1 1 auto;
      overflow: auto;
      
@@ -49,43 +47,12 @@
      border-top: 1px solid #e5e7eb;
  }  
 }
-.accordions{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    max-height: 100%;
-    gap: 16px;
-}
-.accordion{
-    border: solid 1px #e5e7eb;
-    &-header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px;
-        font-size: 20px;
-        font-weight: 500;
-        cursor: pointer;
-    }
-    &-body{
-        padding: 16px;
-        flex: 1 1 auto;
-        overflow: auto;
-        display: none;
-    }
-}
-.test{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    max-height: 100%;
-}
+
 .box{
     padding: 1rem
 }
 @mixin modal($name) {
     .#{$name}{
-        @extend .test;
         &-header{
             @extend .box;
             border-bottom: 1px solid #e5e7eb;

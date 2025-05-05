@@ -1,7 +1,70 @@
 :root {
     --rounded: 0.25rem;
-    --size: 36px;
+    --input-size: 36px;
     --spacer: 1rem;
     --gap: 1rem;
+    --padding: 1rem;
+    --body-color: #343a40;
+    --text-color: #868e96;
 }
 $spacer: 1rem;
+$border-widths: (0, 1px, 2px, 3px, 4px, 5px);
+$border-radius: (none, 0.125rem, 0.25rem, 0.5rem, 1rem);
+// Opacity levels
+$opacities: (0, 0.25, 0.5, 0.75, 1);
+// Shadow definitions
+$shadows: (
+  none: none,
+  sm: 0 1px 2px rgba(0, 0, 0, 0.1),
+  md: 0 4px 6px rgba(0, 0, 0, 0.1),
+  lg: 0 10px 15px rgba(0, 0, 0, 0.1),
+  xl: 0 20px 25px rgba(0, 0, 0, 0.1),
+);
+
+
+
+// Colors
+$colors: (
+  primary: #fa8a20,
+  secondary: #2a2a2a,
+  success: #4caf50,
+  danger: #f44336,
+  warning: #ff9800,
+  info: #2196f3,
+  light: #f4f4f4,
+  dark: #212121
+);
+
+// Transitions
+$transitions: (
+  all: all 0.3s ease-in-out,
+  color: color 0.3s ease-in-out,
+  opacity: opacity 0.3s ease-in-out,
+  transform: transform 0.3s ease-in-out
+);
+
+// Animations
+$animations: (
+  fade-in: fadeIn 0.5s ease-in-out,
+  slide-up: slideUp 0.5s ease-in-out,
+);
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

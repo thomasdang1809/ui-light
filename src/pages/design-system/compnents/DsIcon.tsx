@@ -1,114 +1,114 @@
-import {Icon2fa, Icon3dCubeSphere, IconAB, IconAccessible, IconAccessPoint, IconAccessPointOff, IconActivity, IconAd, IconAd2, IconAdjustments, IconAdjustmentsAlt, IconAdjustmentsHorizontal, IconAerialLift, IconAffiliate, IconAlarm, IconAlertCircle, IconAlertOctagon, IconAlertTriangle, IconAlien, IconAlignCenter, IconAlignJustified, IconAlignLeft, IconAlignRight, IconAmbulance, IconAnchor, IconAngle, IconAntennaBars1, IconAntennaBars2, IconAntennaBars3, IconAntennaBars4, IconAntennaBars5, IconAperture, IconApple, IconAppWindow } from "@tabler/icons-react"
+import { Icon2fa, Icon3dCubeSphere, IconAB, IconAccessible, IconAccessPoint, IconAccessPointOff, IconActivity, IconAd, IconAd2, IconAdjustments, IconAdjustmentsAlt, IconAdjustmentsHorizontal, IconAerialLift, IconAffiliate, IconAlarm, IconAlertCircle, IconAlertOctagon, IconAlertTriangle, IconAlien, IconAlignCenter, IconAlignJustified, IconAlignLeft, IconAlignRight, IconAmbulance, IconAnchor, IconAngle, IconAntennaBars1, IconAntennaBars2, IconAntennaBars3, IconAntennaBars4, IconAntennaBars5, IconAperture, IconApple, IconAppWindow } from "@tabler/icons-react"
 import Section from "../../../components/containers/Section"
 
 const DsIcon: React.FC = () => {
     return (
         <Section title="Icons">
-            <div className="grid-auto-fill ds-grid-icon">
-            <span>
-                    <Icon2fa/>
+            <div className="grid cols-12 min-40 ds-grid-icon">
+                <span>
+                    <Icon2fa />
                 </span>
                 <span>
-                    <Icon3dCubeSphere/>
+                    <Icon3dCubeSphere />
                 </span>
                 <span>
-                    <IconAB/>
+                    <IconAB />
                 </span>
                 <span>
-                    <IconAccessPointOff/>
+                    <IconAccessPointOff />
                 </span>
                 <span>
-                    <IconAccessPoint/>
+                    <IconAccessPoint />
                 </span>
                 <span>
-                    <IconAccessible/>
+                    <IconAccessible />
                 </span>
                 <span>
-                    <IconActivity/>
+                    <IconActivity />
                 </span>
                 <span>
-                    <IconAd2/>
+                    <IconAd2 />
                 </span>
                 <span>
-                    <IconAd/>
+                    <IconAd />
                 </span>
                 <span>
-                    <IconAdjustmentsAlt/>
+                    <IconAdjustmentsAlt />
                 </span>
                 <span>
-                    <IconAdjustmentsHorizontal/>
+                    <IconAdjustmentsHorizontal />
                 </span>
                 <span>
-                    <IconAdjustments/>
+                    <IconAdjustments />
                 </span>
-                
-                
-                
+
+
+
                 <span>
-                    <IconAerialLift/>
-                </span>
-                <span>
-                    <IconAffiliate/>
+                    <IconAerialLift />
                 </span>
                 <span>
-                    <IconAlarm/>
+                    <IconAffiliate />
                 </span>
                 <span>
-                    <IconAlertCircle/>
+                    <IconAlarm />
                 </span>
                 <span>
-                    <IconAlertOctagon/>                    
+                    <IconAlertCircle />
                 </span>
                 <span>
-                    <IconAlertTriangle/>
+                    <IconAlertOctagon />
                 </span>
                 <span>
-                    <IconAlien/>
+                    <IconAlertTriangle />
                 </span>
                 <span>
-                    <IconAlignCenter/>
+                    <IconAlien />
                 </span>
                 <span>
-                    <IconAlignJustified/>
+                    <IconAlignCenter />
                 </span>
                 <span>
-                    <IconAlignLeft/>
+                    <IconAlignJustified />
                 </span>
                 <span>
-                    <IconAlignRight/>
+                    <IconAlignLeft />
                 </span>
                 <span>
-                    <IconAmbulance/>
+                    <IconAlignRight />
                 </span>
                 <span>
-                    <IconAnchor/>
+                    <IconAmbulance />
                 </span>
                 <span>
-                    <IconAngle/>
+                    <IconAnchor />
                 </span>
                 <span>
-                    <IconAntennaBars1/>
+                    <IconAngle />
                 </span>
                 <span>
-                    <IconAntennaBars2/>
+                    <IconAntennaBars1 />
                 </span>
                 <span>
-                    <IconAntennaBars3/>
+                    <IconAntennaBars2 />
                 </span>
                 <span>
-                    <IconAntennaBars4/>
+                    <IconAntennaBars3 />
                 </span>
                 <span>
-                    <IconAntennaBars5/>
+                    <IconAntennaBars4 />
                 </span>
                 <span>
-                    <IconAperture/>
+                    <IconAntennaBars5 />
                 </span>
                 <span>
-                    <IconAppWindow/>
+                    <IconAperture />
                 </span>
                 <span>
-                    <IconApple/>
+                    <IconAppWindow />
+                </span>
+                <span>
+                    <IconApple />
                 </span>
                 <span>a</span>
                 <span>a</span>

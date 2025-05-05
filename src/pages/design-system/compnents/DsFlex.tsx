@@ -84,6 +84,14 @@ const DsFlex: React.FC = () => {
                     })
                 }
             </Flex>
+            <Flex>
+                <Item className="lg:col-4 sm:col-8">
+                    Column 4
+                </Item>
+                <Item className="col-8">
+                    Column 8
+                </Item>
+            </Flex>
         </Section>
     )
 }

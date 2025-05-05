@@ -1,7 +1,19 @@
-[class*="gap"] {
+[class*="gap-"] {
     gap: var(--gap);
 }
 
-@include generate-utility('gap', 'gap', $input-sizes);
 
 
+$gaps: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.50rem,
+  3: 1.75rem,
+  4: 1.00rem,
+  5: 1.50rem,
+  6: 2.00rem,
+  7: 3.00rem,
+  auto: auto
+);
+
+@include generate-utility-classes($gaps, "gap");

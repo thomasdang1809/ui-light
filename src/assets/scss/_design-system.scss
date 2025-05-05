@@ -85,19 +85,15 @@
 .min-80{
     --size:80px
 }
+.min-90{
+    --size:90px
+}
 .min-120{
     --size:120px
 }
 
-.grid-auto-fill{
-    grid-template-columns: repeat( auto-fill, minmax(var(--size), 1fr) );
-}
-.grid-auto-fit{
-    grid-template-columns: repeat( auto-fit, minmax(var(--size), 1fr) );
-}
 .ds-grid-icon{
 
-    gap: 1rem;
     span{
         border: solid 1px #ddd;
         aspect-ratio: 1/1;

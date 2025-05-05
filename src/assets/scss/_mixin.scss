@@ -26,40 +26,9 @@
   }
 }
 
-.modal-header {
-  --padding: 1rem;
-  border-bottom: solid 1px #e5e7eb;
-}
-
-.modal-footer {
-  border-top: solid 1px #e5e7eb;
-}
-
-.modal-body {
-  overflow: auto;
-  padding: 1rem;
-}
-
-@mixin unify-parents($child) {
-  @at-root #{selector.nest($child ,   "&-header")} {
-    padding: var(--padding);
-    @extend .modal-header;
-  }
-}
 
 
-@mixin apply-to-all($mixin, $list) {
-  @each $element, $value in $list {
-    @include meta.apply($mixin, $element, $value);
-  }
-}
 
-@mixin font-class($size, $a) {
-  .font-#{$size} {
-    --font-size: #{$size};
-    font-weight: $a;
-  }
-}
 
 
 $theme-colors: (
@@ -80,12 +49,47 @@ $theme-colors1: (
   "danger": #d32f2f
 );
 
-//$theme-colors: map.merge($theme-colors, $theme-colors1);
+//-----------------------------------------
+// _mixin.scss
 
+// Mixin for responsive breakpoints
+@mixin respond($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
 
-@each $name, $color in $theme-colors {
-  .bg-#{$name} {
-    background-color: $color;
-    color: white;
+// Mixin for creating utility classes based on a list of values
+@mixin generate-utility-classes($values, $prefix) {
+  @each $key, $value in $values {
+    .#{$prefix}-#{$key} {
+      --#{$prefix}: #{$value};
+    }
+  }
+}
+
+// Mixin for responsive utilities (margin, padding, etc.)
+@mixin generate-responsive-utilities($breakpoints, $utilities) {
+  @each $breakpoint, $bp-value in $breakpoints {
+    @include respond($breakpoint) {
+      @each $key, $value in $utilities {
+        .#{$breakpoint}\:#{$key}-#{$value} {
+          #{$key}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+// Mixin for responsive borders, radius, shadows, etc.
+@mixin generate-responsive-style($breakpoints, $properties, $prefix) {
+  @each $breakpoint, $bp-value in $breakpoints {
+    @include respond($breakpoint) {
+      @each $key, $value in $properties {
+        .#{$breakpoint}\:#{$prefix}-#{$key} {
+          #{$prefix}: #{$value};
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,57 @@
+// Breakpoints
+$breakpoints: (
+  xs: 320px,
+  sm: 360px,
+  ms: 480px,
+  md: 768px,
+  ml: 900px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+@mixin bp($breakpoint) {
+  $width: map-get($breakpoints, $breakpoint);
+  @media (min-width: $width) {
+    @content;
+  }
+}
+.container-fluid{
+    max-width: 100%;
+}
+.container {
+  width: 100%;
+  margin: 0 auto; // Center container
+
+  @include bp(xs) {
+    max-width: 280px; // Example width for xs
+  }
+
+  @include bp(sm) {
+    max-width: 320px; // Example width for sm
+  }
+
+  @include bp(ms) {
+    max-width: 420px; // Example width for ms
+  }
+
+  @include bp(md) {
+    max-width: 600px; // Example width for md
+  }
+
+  @include bp(ml) {
+    max-width: 800px; // Example width for ml
+  }
+
+  @include bp(lg) {
+    max-width: 1000px; // Example width for lg
+  }
+
+  @include bp(xl) {
+    max-width: 1200px; // Example width for xl
+  }
+}
+
+.contain{
+    margin: 0 auto;
+    max-width: 1400px;
+}

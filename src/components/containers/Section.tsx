@@ -7,7 +7,10 @@ interface ISection {
 const Section: React.FC<ISection> = ({ title, children }) => {
     return (
         <section className="ds-section">
-            <div className="ds-heading">{title}</div>
+            {
+                title && <div className="ds-heading">{title}</div>
+            }
+            
             <div className="content">
                 {children}
             </div>
