@@ -14,6 +14,7 @@ import DsFlex from "./design-system/compnents/DsFlex";
 
 import DsAccordion from "./design-system/compnents/DsAccordion";
 import Product from "../components/cards/Product";
+import { NavLink } from "react-router-dom";
 
 const Home: React.FC = () => {
     
@@ -25,7 +26,7 @@ const Home: React.FC = () => {
                 <Product />
                 <Product />
             </div>
-           
+            <NavLink to="/portfolio">Portfolio</NavLink>
             <DsFlex />
             <DsAccordion />
             <DsFont />
